@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+/*** ELEMENTS ***/
+
+/* Make visited links have the same color as unvisited links */
+a
+{
+    color: #0000FF;
+}
+a:visited
+{
+    color: #0000FF;
+}
+a:active
+{
+    color: #0000FF;
+}
+/* Larger font size and nice font face */
+body
+{
+    font-size: 28pt;
+    font-family: Libre Baskerville;
+}
+/* Make h1 left-align (slide titles) and bold */
+h1
+{
+    font-weight: bold;
+    text-align: left;
+}
+/* Make all other headings non-bold */
+h2, h3, h4, h5
+{
+    font-weight: normal;
+}
+/* Use consistent bullets and increase line spacings */
+ul
+{
+    list-style-type: disc;
+    line-height: 2em;
+}
+
+/*** CLASSES ***/
+
+/* Make slide numbers appear in the bottom right corner */
+div#slide-number
+{
+    position: absolute;
+    text-align: right;
+    right: 2.5em;
+    bottom: 1em;
+}
+/* Hide slide number on the first slide */
+.impress-on-title div#slide-number
+{
+    display: none;
+}
+/* Make slides larger and fade on opacity changes */
+div.step
+{
+    width: 1000px;
+    height: 800px;
+    transition: opacity 1s ease-in-out;
+}
+
+/*** IDs ***/
+
+/* Logo container */
+div.logos-container
+{
+    height: 3em;
+}
+/* Hide the logo cache */
+div#logos-cache
+{
+    display: none;
+}
+/* Make text on the title slide center-aligned */
+div#title
+{
+	text-align: center;
+}
+/* Make the h1 on the title slide center-aligned */
+div#title h1
+{
+	text-align: center;
+}
+/* Leave a gap between the title and the authors */
+div#title h2
+{
+    padding-bottom: 0.5em;
+}
+/* Make the affiliation smaller and grey */
+div#title h4
+{
+    font-size: 80%;
+    color: #606060;
+}
+/* Logos */
+img.logo
+{
+    height: inherit;
+}
+/* Spacer between logos */
+span.logos-spacer
+{
+    display: inline-block;
+    width: 1em;
+}
