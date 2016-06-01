@@ -48,6 +48,7 @@ div#slide-number
     text-align: right;
     right: 2.5em;
     bottom: 1em;
+    font-size: 5vh;
 }
 /* Hide slide number on the first slide */
 .impress-on-title div#slide-number
