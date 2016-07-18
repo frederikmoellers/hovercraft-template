@@ -44,16 +44,20 @@ ul
 /* Make slide numbers appear in the bottom right corner */
 div#slide-number
 {
-    position: absolute;
-    text-align: right;
-    right: 2.5em;
     bottom: 1em;
     font-size: 5vh;
+    opacity: 1;
+    position: absolute;
+    right: 2.5em;
+    text-align: right;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 1.5s;
 }
 /* Hide slide number on the first slide */
 .impress-on-title div#slide-number
 {
-    display: none;
+    opacity: 0;
+    transition-delay: 0s;
 }
 /* Make slides larger and fade on opacity changes */
 div.step
