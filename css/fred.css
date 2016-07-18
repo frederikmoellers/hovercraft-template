@@ -1,17 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
 
-/*** ELEMENTS ***/
+/*** GENERAL LAYOUT ***/
 
 /* Make visited links have the same color as unvisited links */
-a
-{
-    color: #0000FF;
-}
-a:visited
-{
-    color: #0000FF;
-}
-a:active
+a, a:visited, a:active
 {
     color: #0000FF;
 }
@@ -20,6 +12,13 @@ body
 {
     font-size: 28pt;
     font-family: Libre Baskerville;
+}
+/* Make slides larger and fade on opacity changes */
+div.step
+{
+    width: 1000px;
+    height: 800px;
+    transition: opacity 1s ease-in-out;
 }
 /* Make h1 left-align (slide titles) and bold */
 h1
@@ -39,7 +38,31 @@ ul
     line-height: 2em;
 }
 
-/*** CLASSES ***/
+/*** LOGOS ***/
+
+/* Logo container */
+div.logos-container
+{
+    height: 3em;
+}
+/* Hide the logo cache */
+div#logos-cache
+{
+    display: none;
+}
+/* Logos */
+img.logo
+{
+    height: inherit;
+}
+/* Spacer between logos */
+span.logos-spacer
+{
+    display: inline-block;
+    width: 1em;
+}
+
+/*** SLIDE NUMBERS ***/
 
 /* Make slide numbers appear in the bottom right corner */
 div#slide-number
@@ -59,55 +82,38 @@ div#slide-number
     opacity: 0;
     transition-delay: 0s;
 }
-/* Make slides larger and fade on opacity changes */
-div.step
-{
-    width: 1000px;
-    height: 800px;
-    transition: opacity 1s ease-in-out;
-}
 
-/*** IDs ***/
+/*** TITLE SLIDE ***/
 
-/* Logo container */
-div.logos-container
-{
-    height: 3em;
-}
-/* Hide the logo cache */
-div#logos-cache
-{
-    display: none;
-}
 /* Make text on the title slide center-aligned */
 div#title
 {
 	text-align: center;
 }
 /* Make the h1 on the title slide center-aligned */
-div#title h1
+div#title>h1
 {
 	text-align: center;
 }
 /* Leave a gap between the title and the authors */
-div#title h2
+div#title>h2
 {
     padding-bottom: 0.5em;
 }
 /* Make the affiliation smaller and grey */
-div#title h4
+div#title>h4
 {
-    font-size: 80%;
     color: #606060;
+    font-size: 80%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
 }
-/* Logos */
-img.logo
+/* Higher margins for first and last affiliation line */
+div#title>h4:first-of-type
 {
-    height: inherit;
+    margin-top: 1.33em;
 }
-/* Spacer between logos */
-span.logos-spacer
+div#title>h4:last-of-type
 {
-    display: inline-block;
-    width: 1em;
+    margin-bottom: 1.33em;
 }
