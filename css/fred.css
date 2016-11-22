@@ -117,3 +117,16 @@ div#title>h4:last-of-type
 {
     margin-bottom: 1.33em;
 }
+
+/*** ONE-AT-A-TIME SLIDES ***/
+/* Hide list items on the slides by default */
+body:not(.in-iframe) div.step.oneatatime > *:not(.notes) li
+{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+/* Shown elements */
+body:not(.in-iframe) div.step.oneatatime > *:not(.notes) li.show
+{
+    opacity: 1;
+}
