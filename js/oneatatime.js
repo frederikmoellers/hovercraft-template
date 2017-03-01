@@ -70,7 +70,7 @@ document.getElementById("impress").addEventListener("impress:stepenter", oneatat
 document.getElementById("impress").addEventListener("impress:stepleave", oneatatime_leave, false);
 
 // if loaded in an iframe (e.g. the speaker console), add a CSS class to the body so we can show all list items by default
-if (window.top.document.documentElement.id == "impressconsole")
+if (window.top != window.self || window.top.document.documentElement.id == "impressconsole")
 {
     document.body.classList.add("in-iframe");
     console.log("Loaded in iFrame!");
