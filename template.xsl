@@ -127,6 +127,10 @@
                         <tr><th>H</th><td>Toggle this help</td></tr>
                     </table>
                 </div>
+                <xsl:if test="/document/@touch-controls">
+                    <div class="touch-control" id="touch-control-left">&lt;</div>
+                    <div class="touch-control" id="touch-control-right" onClick="impress().next();">&gt;</div>
+                </xsl:if>
                 <xsl:if test="/document/@logos">
                     <div id="logos-cache">
                         <xsl:call-template name="logos">
@@ -138,6 +142,12 @@
                     var change_link_targets = true;
                     <xsl:if test="/document/@link-targets-samewindow">
                         change_link_targets = false;
+                    </xsl:if>
+                </script>
+                <script type="text/javascript">
+                    var use_touch_controls = false;
+                    <xsl:if test="/document/@touch-controls">
+                        use_touch_controls = true;
                     </xsl:if>
                 </script>
                 <xsl:for-each select="/document/templateinfo/body/js">

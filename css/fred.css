@@ -134,3 +134,34 @@ body:not(.in-iframe) div.step.oneatatime > *:not(.notes) li.show
 {
     opacity: 1;
 }
+
+/*** TOUCH CONTROLS ***/
+body.in-iframe div.touch-control
+{
+    display: none;
+}
+div.touch-control
+{
+    cursor: pointer;
+    color: #C0C0C0;
+    font-family: Lato Heavy, Arial Black, sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    height: 100%;
+    line-height: 100vh;
+    position: fixed;
+    top: 0px;
+    transform: scaleY(5);
+    vertical-align: middle;
+    width: 50px;
+}
+div#touch-control-left
+{
+    left: 0px;
+    text-align: left;
+}
+div#touch-control-right
+{
+    right: 0px;
+    text-align: right;
+}
